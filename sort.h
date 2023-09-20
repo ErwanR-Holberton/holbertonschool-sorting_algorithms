@@ -26,12 +26,8 @@ void quick_sort(int *array, size_t size);
 void shell_sort(int array[], int size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
-<<<<<<< HEAD
 void radix_sort(int *array, size_t size);
 int countDigits(int number);
 void make_array(int *array, size_t size, int nb_digits);
-=======
-void merge_sort(int *array, size_t size);
->>>>>>> 739a90f679af3176d45dcb182501bf2ead47815c
 
 #endif /* SORT_H */
