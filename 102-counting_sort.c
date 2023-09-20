@@ -7,6 +7,9 @@
 */
 void counting_sort(int *array, size_t size)
 {
+	if (array == NULL || size == 0)
+		return;
+
 	size_t i;
 	int j, number = 0, max = 0;
 
