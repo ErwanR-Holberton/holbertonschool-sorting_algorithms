@@ -3,12 +3,12 @@
  * make_array - name of the function
  * Description: make a temporary array
  * @array: the origin array
- * @array: size of the origin array
+ * @size: size of the origin array
  * @nb_digits: number of digits of the maximum value
-*/
+ */
 void make_array(int *array, size_t size, int nb_digits)
 {
-	int array_temp[size], i, j, number, k;
+	int *array_temp, i, j, number, k;
 	int puissance = 1;
 	int count[10];
 
@@ -27,7 +27,9 @@ void make_array(int *array, size_t size, int nb_digits)
 		{
 			count[j] += count[j - 1];
 		}
-
+		array_temp = malloc(size * sizeof(int));
+		if (array_temp == NULL)
+			return;
 		for (j = size - 1; j >= 0; j--)
 		{
 			number = (array[j] / puissance) % 10;
@@ -40,6 +42,7 @@ void make_array(int *array, size_t size, int nb_digits)
 		}
 		puissance *= 10;
 		print_array(array, size);
+		free(array_temp);
 	}
 }
 /**
@@ -57,7 +60,7 @@ int countDigits(int number)
 		number /= 10;
 		count++;
 	}
-	return count;
+	return (count);
 }
 /**
  * radix_sort - name of the function
