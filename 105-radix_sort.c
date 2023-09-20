@@ -71,6 +71,9 @@ void radix_sort(int *array, size_t size)
 	int nb_digits;
 	size_t i;
 
+	if (array == NULL || size == 0)
+		return;
+
 	for (i = 0; i < size; i++)
 	{
 		if (array[i] > max)
