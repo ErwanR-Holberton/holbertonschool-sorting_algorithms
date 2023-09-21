@@ -60,6 +60,8 @@ void cocktail_sort_list(listint_t **list)
 				current = current->next;
 		}
 		right = current;
+		if (right == left)
+			break;
 		while (current->prev != left)
 		{
 			if (current->n < current->prev->n)
