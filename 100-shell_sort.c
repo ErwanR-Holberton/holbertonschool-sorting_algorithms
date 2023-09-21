@@ -9,6 +9,8 @@ void shell_sort(int array[], int size)
 {
 	int temp, j, i, interval = 1;
 
+	if (array == NULL || size < 2)
+		return;
 	/* Calcul de l'intervalle selon la séquence de Knuth*/
 	while (interval <= size / 3)
 	{
