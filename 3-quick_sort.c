@@ -70,7 +70,14 @@ void quicksort_custom(int *array, int left, int right, int size)
 */
 void quick_sort(int *array, size_t size)
 {
-	quicksort_custom(array, 0, size - 1, size);
+	unsigned int i;
+	for (i = 0; i < size - 1; i++)
+		if (array[i] > array[i + 1])
+		{
+			quicksort_custom(array, 0, size - 1, size);
+			break;
+		}
+
 }
 
 
