@@ -71,6 +71,9 @@ void quicksort_custom(int *array, int left, int right, int size)
 void quick_sort(int *array, size_t size)
 {
 	unsigned int i;
+
+	if (array == NULL)
+		return;
 	for (i = 0; i < size - 1; i++)
 		if (array[i] > array[i + 1])
 		{
